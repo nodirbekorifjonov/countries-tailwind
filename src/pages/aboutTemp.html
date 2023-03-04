@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html class="h-full text-[62.5%] scroll-smooth" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body
+    class="h-full flex flex-col font-['Nunito_Sans'] font-light text-[1.4rem] leading-[1.14rem] text-[#111517] bg-[#fafafa] pt-[8rem] transition ease-in duration-100 dark:bg-[#202c36] dark:text-[#ffffff]"
+  >
+    <!-- HEADER -->
+    <header
+      class="header bg-[#ffffff] py-[2.4rem] px-0 shadow-[0_2px_4px_-15px_rgba(0,0,0,0.0562443)] fixed top-0 z-[1] w-full transition ease-in duration-300 max-[576px]:py-[3rem] max-[576px]:px-0 dark:bg-[#2b3844]"
+    >
+      <div class="container flex items-center">
+        <a
+          class="header__logo font-extrabold text-[2.4rem] leading-[1.36] mr-auto max-[576px]:text-[1.5rem]"
+          href="./index.html"
+          >Where in the world?</a
+        >
+        <button
+          class="header__dark-mode text-[1.6rem] font-semibold leading-[1.31] bg-transparent outline-none text-[#111517] dark:text-[#ffffff]"
+        >
+          <div class="flex items-center">
+            <svg
+              class="w-[20px] h-[20px] mr-[0.8rem]"
+              width="20"
+              height="20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                class="stroke-[#111517] dark:stroke-[#ffffff]"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M13.55 13.81c-3.88 0-7.03-2.88-7.03-6.44 0-1.34.45-2.59 1.21-3.62C4.7 4.7 2.5 7.33 2.5 10.44c0 3.9 3.45 7.06 7.7 7.06 3.4 0 6.27-2 7.3-4.8a7.46 7.46 0 0 1-3.95 1.12Z"
+                fill="#fff"
+                stroke="#111517"
+                stroke-width="1.25"
+              />
+            </svg>
+            <span>Dark Mode</span>
+          </div>
+        </button>
+      </div>
+    </header>
+    <!-- HEADER END -->
+
+    <!-- MAIN -->
+    <main class="main grow">
+      <div class="container">
+        <div
+          class="back-button-wrapper my-[5rem] mx-0 max-[576px]:mt-[4rem] max-[576px]:mx-0 max-[576px]:mb-[6rem]"
+        >
+          <a
+            class="back-button py-[1rem] pr-[3.9rem] pl-[3.2rem] inline-flex items-center rounded-[6px] shadow-[0_0_7px_rgba(0,0,0,0.293139)]"
+            href="./index.html"
+          >
+            <svg
+              class="mr-[1rem]"
+              width="20"
+              height="20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                class="fill-[#111517] dark:fill-[#ffffff]"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M6.46 4.1 7.64 5.3 3.75 9.18H18.6v1.64H3.75l3.9 3.9-1.19 1.17L.57 10l5.9-5.9Z"
+                fill="#111517"
+              />
+            </svg>
+            <span>Back</span>
+          </a>
+        </div>
+
+        <div
+          class="country-info flex items-center justify-between max-[1200px]:flex-col"
+        >
+          <!-- <img
+            class="country-info__img w-[560px] h-[400px] rounded-[10px] block object-cover object-center mr-[2rem] max-[1200px]:mr-0 max-[1200px]:mb-[5rem] max-[576px]:w-full max-[576px]:h-auto max-[450px]:mb-[4rem]"
+            src="./images/jpg/germany-flag.jpg"
+            alt="germany-flag"
+            width="560"
+            height="400"
+          />
+          <div
+            class="country-info__content w-full max-w-[598px] max-[1200px]:mb-[5rem]"
+          >
+            <h2
+              class="text-[3.2rem] leading-[1.36] font-bold mb-[2.3rem] max-[450px]:mb-[1.6rem]"
+            >
+              Germany
+            </h2>
+            <ul
+              class="country-info__list flex items-start justify-between mb-[6.5rem] max-[450px]:flex-col max-[450px]:mb-[3rem]"
+            >
+              <li class="country-info__item max-[450px]:mb-[3rem]">
+                <p class="name mb-[0.8rem] font-semibold">
+                  Native Name:
+                  <span class="font-light">Germany</span>
+                </p>
+                <p class="population mb-[0.8rem] font-semibold">
+                  Population:
+                  <span class="font-light">81,770,900</span>
+                </p>
+                <p class="region mb-[0.8rem] font-semibold">
+                  Region:
+                  <span class="font-light">Europe</span>
+                </p>
+                <p class="sub-region mb-[0.8rem] font-semibold">
+                  Sub Region:
+                  <span class="font-light">Western Europe</span>
+                </p>
+                <p class="capital font-semibold">
+                  Capital:
+                  <span class="font-light">Berlin</span>
+                </p>
+              </li>
+              <li class="country-info__item">
+                <p class="name mb-[0.8rem] font-semibold">
+                  Top Level Domain:
+                  <span class="font-light">.de</span>
+                </p>
+                <p class="population mb-[0.8rem] font-semibold">
+                  Currencies:
+                  <span class="font-light">Euro</span>
+                </p>
+                <p class="region font-semibold">
+                  Languages:
+                  <span class="font-light">Dutch, German</span>
+                </p>
+              </li>
+            </ul>
+
+            <div
+              class="country-info__borders flex items-center flex-wrap gap-[1rem]"
+            >
+              <h3 class="font-semibold mr-[0.5rem]">Border Countries:</h3>
+              <a
+                class="min-w-[96px] py-[0.5rem] px-[1rem] inline-flex justify-center shadow-[0_0_4px_1px_rgba(0,0,0,0.104931)] font-light text-[1.4rem] leading-[1.4]"
+                href="#"
+                >France</a
+              >
+              <a
+                class="min-w-[96px] py-[0.5rem] px-[1rem] inline-flex justify-center shadow-[0_0_4px_1px_rgba(0,0,0,0.104931)] font-light text-[1.4rem] leading-[1.4]"
+                href="#"
+                >Belgium</a
+              >
+              <a
+                class="min-w-[96px] py-[0.5rem] px-[1rem] inline-flex justify-center shadow-[0_0_4px_1px_rgba(0,0,0,0.104931)] font-light text-[1.4rem] leading-[1.4]"
+                href="#"
+                >Netherlands</a
+              >
+              <a
+                class="min-w-[96px] py-[0.5rem] px-[1rem] inline-flex justify-center shadow-[0_0_4px_1px_rgba(0,0,0,0.104931)] font-light text-[1.4rem] leading-[1.4]"
+                href="#"
+                >Denmark</a
+              >
+              <a
+                class="min-w-[96px] py-[0.5rem] px-[1rem] inline-flex justify-center shadow-[0_0_4px_1px_rgba(0,0,0,0.104931)] font-light text-[1.4rem] leading-[1.4]"
+                href="#"
+                >Poland</a
+              >
+              <a
+                class="min-w-[96px] py-[0.5rem] px-[1rem] inline-flex justify-center shadow-[0_0_4px_1px_rgba(0,0,0,0.104931)] font-light text-[1.4rem] leading-[1.4]"
+                href="#"
+                >Szech</a
+              >
+              <a
+                class="min-w-[96px] py-[0.5rem] px-[1rem] inline-flex justify-center shadow-[0_0_4px_1px_rgba(0,0,0,0.104931)] font-light text-[1.4rem] leading-[1.4]"
+                href="#"
+                >Austria</a
+              >
+              <a
+                class="min-w-[96px] py-[0.5rem] px-[1rem] inline-flex justify-center shadow-[0_0_4px_1px_rgba(0,0,0,0.104931)] font-light text-[1.4rem] leading-[1.4]"
+                href="#"
+                >Switzerland</a
+              >
+              <a
+                class="min-w-[96px] py-[0.5rem] px-[1rem] inline-flex justify-center shadow-[0_0_4px_1px_rgba(0,0,0,0.104931)] font-light text-[1.4rem] leading-[1.4]"
+                href="#"
+                >Luxembourg</a
+              >
+            </div>
+          </div>
+        </div> -->
+        </div>
+      </div>
+    </main>
+    <!-- MAIN END -->
+
+    <!-- FOOTER -->
+    <footer
+      class="footer bg-[#ffffff] shadow-[0_-4px_4px_rgba(0,0,0,0.0562443)] py-[2.6rem] px-0 text-center transition-[all 0.3s ease-in] dark:bg-[#2b3844]"
+    >
+      <h3 class="text-[#111517] font-bold dark:text-[#ffffff]">
+        by Nodirbek Orifjonov
+      </h3>
+    </footer>
+    <!-- FOOTER END -->
+    <!-- LOADER -->
+    <div class="loader hidden">
+      <div class="lds-roller">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </body>
+</html>
